@@ -4,7 +4,6 @@ src
 .gitignore
 babel.config.js
 jest.config.js
-*.md
 rollup.config.js
 setup.test.js
 .idea
