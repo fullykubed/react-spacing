@@ -1,6 +1,6 @@
 {
   "name": "react-spacing",
-  "version": "0.2.2",
+  "version": "0.2.3",
   "description": "Utilities and best practices for handling spacing in React",
   "main": "lib/index.cjs.js",
   "module": "lib/index.es.js",
