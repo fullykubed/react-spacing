@@ -1,0 +1,59 @@
+{
+  "name": "react-spacing",
+  "version": "0.1.0",
+  "description": "Utilities and best practices for handling spacing in React",
+  "main": "lib/index.cjs.js",
+  "module": "lib/index.es.js",
+  "directories": {
+    "example": "examples"
+  },
+  "scripts": {
+    "test": "jest",
+    "build": "rollup -c ./rollup.config.js",
+    "prepublish": "npm run test; npm run build;"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jclangst/react-spacing.git"
+  },
+  "keywords": [
+    "React",
+    "spacing",
+    "layout"
+  ],
+  "author": "Jack Langston",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/jclangst/react-spacing/issues"
+  },
+  "homepage": "https://github.com/jclangst/react-spacing#readme",
+  "peerDependencies": {
+    "react": ">=16.0.0",
+    "react-dom": ">=16.0.0"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.4.4",
+    "@babel/plugin-proposal-class-properties": "^7.4.4",
+    "@babel/plugin-proposal-object-rest-spread": "^7.4.4",
+    "@babel/plugin-transform-destructuring": "^7.4.4",
+    "@babel/plugin-transform-runtime": "^7.4.4",
+    "@babel/preset-env": "^7.4.4",
+    "@babel/preset-react": "^7.0.0",
+    "babel-cli": "^6.26.0",
+    "babel-jest": "^24.8.0",
+    "enzyme": "^3.9.0",
+    "enzyme-adapter-react-16": "^1.12.1",
+    "enzyme-to-json": "^3.3.5",
+    "jest": "^24.8.0",
+    "react": "^16.8.6",
+    "react-dom": "^16.8.6",
+    "rollup": "^1.11.3",
+    "rollup-plugin-babel": "^4.3.2",
+    "rollup-plugin-commonjs": "^9.3.4",
+    "rollup-plugin-filesize": "^6.0.1",
+    "rollup-plugin-node-resolve": "^4.2.3"
+  },
+  "dependencies": {
+    "@babel/runtime": "^7.4.4"
+  }
+}
