@@ -170,7 +170,7 @@ export default withContainer(ChildComponent);
 
 #### Parent Component
 ```jsx
-import React from
+import React from 'react';
 
 import ChildComponent from './ChildComponent';
 
