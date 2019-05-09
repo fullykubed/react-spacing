@@ -1,0 +1,49 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`maybeNull class components renders ifNull 1`] = `
+<_class>
+  <div
+    id="notRendered"
+  />
+</_class>
+`;
+
+exports[`maybeNull class components renders ifRender 1`] = `
+<_class
+  testProp="jack"
+>
+  <div
+    id="rendered"
+  >
+    <div />
+  </div>
+</_class>
+`;
+
+exports[`maybeNull class components renders nothing 1`] = `<_class />`;
+
+exports[`maybeNull class components renders nothing 2 1`] = `<_class />`;
+
+exports[`maybeNull functional components renders ifNull 1`] = `
+<bound >
+  <div
+    id="notRendered"
+  />
+</bound >
+`;
+
+exports[`maybeNull functional components renders ifRender 1`] = `
+<bound 
+  testProp="jack"
+>
+  <div
+    id="rendered"
+  >
+    <div />
+  </div>
+</bound >
+`;
+
+exports[`maybeNull functional components renders nothing 1`] = `<bound  />`;
+
+exports[`maybeNull functional components renders nothing 2 1`] = `<bound  />`;

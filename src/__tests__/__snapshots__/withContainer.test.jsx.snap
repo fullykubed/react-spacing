@@ -1,49 +1,42 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`withContainer class components renders ifNull 1`] = `
-<_class>
-  <div
-    id="notRendered"
-  />
-</_class>
-`;
-
-exports[`withContainer class components renders ifRender 1`] = `
-<_class
-  testProp="jack"
->
-  <div
-    id="rendered"
-  >
-    <div />
-  </div>
-</_class>
-`;
-
-exports[`withContainer class components renders nothing 1`] = `<_class />`;
-
-exports[`withContainer class components renders nothing 2 1`] = `<_class />`;
-
-exports[`withContainer functional components renders ifNull 1`] = `
-<bound >
-  <div
-    id="notRendered"
-  />
-</bound >
-`;
-
-exports[`withContainer functional components renders ifRender 1`] = `
+exports[`withContainer adds div 1`] = `
 <bound 
-  testProp="jack"
+  className="blah"
+  requiredProp="Jack"
 >
-  <div
-    id="rendered"
+  <bound 
+    requiredProp="Jack"
   >
-    <div />
-  </div>
+    <div
+      className="blah"
+    >
+      <p>
+        I received 
+        Jack
+        !
+      </p>
+    </div>
+  </bound >
 </bound >
 `;
 
-exports[`withContainer functional components renders nothing 1`] = `<bound  />`;
+exports[`withContainer doesnt add div on null render 1`] = `
+<bound 
+  className="blah"
+>
+  <bound  />
+</bound >
+`;
 
-exports[`withContainer functional components renders nothing 2 1`] = `<bound  />`;
+exports[`withContainer executes alternative on null render 1`] = `
+<bound 
+  ifNull={[Function]}
+>
+  <bound >
+    <p>
+      TestComponent was null!
+    </p>
+  </bound >
+</bound >
+`;

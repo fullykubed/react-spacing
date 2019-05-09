@@ -1,22 +1,18 @@
 import React from 'react';
+import {maybeNull} from "./maybeNull";
 
-export function withContainer({
-  Component,
-  ifRender,
-  ifNull
-}){
-  if(typeof Component !== "function"){
-    throw new Error('Component must be a React comoonent!');
-  }
-  const renderComponent = (result) =>
-    result === null ? (ifNull ? ifNull() : null) : (ifRender ? ifRender(result) : null);
-  if(Component.prototype.render){
-    return class extends Component {
-      render() {
-        return renderComponent(super.render())
-      }
-    }
-  }else{
-    return (props) => renderComponent(Component(props));
+export function withContainer(Component){
+  return (props) => {
+    const {className, style, ifNull, ...rest} = props;
+    const SafeComponent = maybeNull({
+      Component,
+      ifNull,
+      ifRender: (children) => (
+        <div className={className} style={style}>
+          {children}
+        </div>
+      )
+    });
+    return <SafeComponent {...rest}/>;
   }
 }
