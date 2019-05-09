@@ -55,7 +55,7 @@ export function ParentComponent() {
 ```
 
 Suppose we want the div that provides the margin to only attach
-to the DOM if <ChildComponent1/> does not "null" render. There
+to the DOM if `ChildComponent1` does not "null" render. There
 is no built-in solution for this.
 
 The canonical solution is to duplicate the conditional that triggers
