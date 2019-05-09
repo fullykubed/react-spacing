@@ -156,7 +156,7 @@ component has a "null" render.
 ```jsx
 import React from 'react';
 
-import withContainer from 'react-spacing';
+import {withContainer} from 'react-spacing';
 
 function ChildComponent({requiredProp}){
 
